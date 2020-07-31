@@ -1,0 +1,19 @@
+{% extends 'navbar.html' %}
+{% block common %}
+{% load static %}
+<html>
+<body>
+
+<table>
+    {% for x in data %}
+    <tr>
+        <th>
+            <img src="{{ x }}" width="400px" height="500px">
+
+        </th>
+    </tr>
+    {% endfor %}
+</table>
+</body>
+</html>
+{% endblock %}
