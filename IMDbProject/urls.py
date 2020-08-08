@@ -21,4 +21,11 @@ from AppIMDb import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('',views.indexpage,name='main'),
+    path('searchMovie/',views.searchMovie,name='searchMovie'),
+
+
+
+
+    # path('videoOpen/',views.videoOpen,name='videoOpen'),
+    # path('playvideo/',views.playvideo,name='playvideo'),
 ]

@@ -1,0 +1,26 @@
+{% extends 'navbar.html' %}
+{% block common %}
+{% load static %}
+
+
+    <div style="padding: 50px">
+<img src="{{ sear_mov.poster }}" height="350" width="250" >
+<div align="center">
+    <h1>{{ sear_mov.title }}</h1>
+    <p class="card-text text-justify">{{ sear_mov.plot }}</p>
+   <a href="{{ sear_mov.trailers }}" class="card-link btn btn-danger">Watch Trailer</a>
+</div>
+</div>
+
+    <table>
+    <tr>
+        <th>
+            {% for x in messages %}
+            {{ x }}
+            {% endfor %}
+        </th>
+    </tr>
+    </table>
+
+
+{% endblock %}

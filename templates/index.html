@@ -2,18 +2,27 @@
 {% block common %}
 {% load static %}
 <html>
-<body>
+<body >
 
-<table>
-    {% for x in data %}
-    <tr>
-        <th>
-            <img src="{{ x }}" width="400px" height="500px">
+<div class="row" style="padding: 50px">
+        {% for x in data %}
 
-        </th>
-    </tr>
-    {% endfor %}
-</table>
+<div style="padding: 50px">
+<img src="{{ x.poster }}" height="350" width="250" >
+<div align="center">
+    <span  style="color: white;font-size: 10px">{{ x.title }}</span>
+    <p class="card-text text-justify">{{ x.plot }}</p>
+   <a href="{{ x.trailers }}" class="card-link btn btn-danger">Watch Trailer</a>
+</div>
+</div>
+
+
+
+        {% endfor %}
+
+</div>
+
+
 </body>
 </html>
 {% endblock %}
